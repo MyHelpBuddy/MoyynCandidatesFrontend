@@ -45,7 +45,7 @@ const PageThree = ({ initialValues, handleFormChange }) => {
 										<Grid item xs={12} lg={6}>
 											<Grid container spacing={3}>
 												<Grid item xs={12}>
-													<Autocomplete
+													<Autocomplete freeSolo={false}
 														options={countriesArray}
 														optionLabel="name"
 														name="Country of Residence"
@@ -75,7 +75,7 @@ const PageThree = ({ initialValues, handleFormChange }) => {
 										<Grid item xs={12} lg={6}>
 											<Grid container spacing={3}>
 												<Grid item xs={12}>
-													<Autocomplete
+													<Autocomplete 
 														options={citiesArray}
 														optionLabel="city"
 														name="City of Residence"

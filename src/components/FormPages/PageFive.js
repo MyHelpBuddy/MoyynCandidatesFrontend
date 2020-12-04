@@ -11,6 +11,7 @@ import Buttons from '../FormElements/Buttons';
 import Skills from '../FormElements/Skills';
 import MissingParts from '../FormElements/MissingParts';
 
+
 const PageFive = ({ initialValues, handleFormChange, formComplete }) => {
 
 	const [alert, setAlert] = useState([]);
@@ -77,7 +78,12 @@ const PageFive = ({ initialValues, handleFormChange, formComplete }) => {
 											<Divider />
 										</Grid>
 										<Grid item xs={12}>
-											<Skills />
+											<Skills /> 
+											{/* <AutocompleteChips freeSolo={true}
+												name='Skills'
+												label='Skills'
+												options={fallbackSkills}
+											/> */}
 										</Grid>
 										<Grid item xs={12}>
 											<Divider />

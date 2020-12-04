@@ -47,14 +47,14 @@ const Form = ({ setEmail ,setSuggestions }) => {
 			setFormValues(prevState => {
 				let newState = [...prevState];
 				newState[part] = {...values, Complete: true};
-
+				
 				return newState;
 			});	
 		} else {
 			setFormValues(prevState => {
 				let newState = [...prevState];
 				newState[part] = {...values};
-
+				
 				return newState;
 			});	
 		}
@@ -69,16 +69,22 @@ const Form = ({ setEmail ,setSuggestions }) => {
 	}
 
 	const submitForm = () => {
+		
+
 		let form = [...formValues];
 
 		const fileName = `${form[0].Email}.pdf`;
 
 		const file = form[1].CV[0].file;
+		
+		form.splice(1,1)
 
-		form.splice(1, 1);
+		
+		
+		form[2]["Desired Position"]=formValues[1]["Desired Position"];
 
-		console.clear()
-		//console.log('final form:', form);
+
+		console.clear();
 
 		let formData = new FormData();
 		formData.append('payload', JSON.stringify(form));
@@ -89,6 +95,7 @@ const Form = ({ setEmail ,setSuggestions }) => {
 			history.push('/candidate/partner');
 		}, 1000 * 120)
 
+		
 		fetch(`${url}/store`, {method: 'POST',body: formData})
 			.then(res => res.json())
 			.then(data => {

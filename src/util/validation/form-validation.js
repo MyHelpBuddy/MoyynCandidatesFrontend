@@ -1,4 +1,5 @@
 import { mixed, string, boolean, object, number, array } from "yup";
+//import {ref} from "yup";
 
 export const pageOneValidation = object({
 	Email: string()
@@ -10,6 +11,13 @@ export const pageOneValidation = object({
 	"Last Name": string("*Please enter a valid name.")
 		.min(2, "*Required field.")
 		.required("*Required field."),
+/* 	"Password": string("*Please enter a valid password.")
+		.min(6, "*Minimum 6 characters")
+		.required("*Required field."),
+	"Confirm Password": string("*Please confirm the password.")
+    .required("*Please confirm the password.")
+    .oneOf([ref('Password'), null], 'Passwords must match'), */
+
 	TermsAndPrivacy: boolean().oneOf(
 		[true],
 		"*Please accept Terms of Use and Privacy Policy."

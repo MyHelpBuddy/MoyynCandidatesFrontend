@@ -13,7 +13,8 @@ const useStyles = makeStyles(theme => ({
 		cursor: 'pointer'
 	},
 	paragraph: {
-		color: '#6c757d'
+		color: '#6c757d',
+		fontSize:'12px'
 	}
 }));
 
@@ -49,7 +50,7 @@ const ResumeUpload = () => {
 									fileObjects={field.value}
 									acceptedFiles={[".pdf"]}
 									filesLimit={1}
-									dropzoneText={<Typography color='textSecondary'>Upload your CV as pdf file (Max file size 3MB) </Typography>}
+									dropzoneText={"Upload your CV as pdf file (Max file size 3MB)" }
 									onAdd={(file) => handleResumeUpload(file)}
 									showPreviewsInDropzone={false}								dropzoneClass={custom.paragraph}
 								/>

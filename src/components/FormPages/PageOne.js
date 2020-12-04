@@ -14,6 +14,8 @@ import {
 import TextField from '../FormElements/TextFieldForm'; 
 import Checkbox from '../FormElements/CheckboxForm';
 
+import Switch from '../FormElements/SwitchForm';
+
 const PageOne = ({ initialValues, handleFormChange }) => {
 
 	const history = useHistory();
@@ -42,6 +44,7 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 
 						return(
 							<Form>
+								
 								<Grid container spacing={5}>
 									<Grid item xs={12}>
 										<Typography
@@ -64,6 +67,21 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 															label='Email'
 														/>
 													</Grid>
+
+													{/* <Grid item xs={12}>
+														<TextField 
+															name='Password'
+															label='Password'
+														/>
+													</Grid>
+
+													<Grid item xs={12}>
+														<TextField 
+															name='Confirm Password'
+															label='Confirm Password'
+														/>
+													</Grid> */}
+
 													<Grid item xs={12} md={6}>
 														<TextField 
 															name='First Name'
@@ -76,6 +94,15 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 															label="Last Name"
 														/>
 													</Grid>
+
+													<Grid item xs={12}>
+													<Switch 
+														name="Currently Looking For Job"
+														label="Currently Looking For a Job"
+														variant='body1'
+													/>
+													</Grid>
+													
 													<Grid item xs={12}>
 														<Checkbox 
 															name='TermsAndPrivacy'

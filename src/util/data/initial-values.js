@@ -5,13 +5,16 @@ export const initialValues = [
 		'First Name': '',
 		'Last Name': '',
 		'Email': '',
+		//'Password':'',
+		'Currently Looking For Job':true,
 		'TermsAndPrivacy': false 
 	},
 	//second page
 	{
 		Complete: false,
 		CV: [],
-		Image: []
+		Image: [],
+		"Desired Position": []
 	},
 	//third page
 	{
@@ -21,7 +24,7 @@ export const initialValues = [
 		"Visa Status": '',
 		"Currently Employed": false,
 		"Driver's License": false,
-		"Notice Period": null,
+		"Notice Period": '0',
 		"Contact Number": '',
 		"Earliest Joining Date": ''
 	},
@@ -48,6 +51,7 @@ export const initialValues = [
 				Behance: '',
 				Other: '',
 			},
+			"Desired Position": ''
 	},
 	//fifth page
 	{
@@ -58,6 +62,7 @@ export const initialValues = [
 		"Work Experience": [],
 		Languages: [],
 	},
+	
 ]
 
 // export const initialValues = [
