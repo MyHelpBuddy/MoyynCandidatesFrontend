@@ -78,7 +78,7 @@ const Languages = () => {
 								variant="outlined"
 								label="Level"
 								disabled={!valueLang}
-								value={null}
+								value={['']}
 							>
 								{levels.map((level) => (
 									<MenuItem

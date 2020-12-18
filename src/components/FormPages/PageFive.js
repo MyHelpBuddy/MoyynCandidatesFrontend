@@ -8,8 +8,8 @@ import WorkExperience from '../FormElements/WorkExperience';
 import Languages from '../FormElements/Languages';
 import AutocompleteChips from '../FormElements/AutocompleteChipsForm';
 import Buttons from '../FormElements/Buttons';
-import Skills from '../FormElements/Skills';
 import MissingParts from '../FormElements/MissingParts';
+import { fallbackSkills } from '../../util/data/static-data';
 
 
 const PageFive = ({ initialValues, handleFormChange, formComplete }) => {
@@ -78,12 +78,12 @@ const PageFive = ({ initialValues, handleFormChange, formComplete }) => {
 											<Divider />
 										</Grid>
 										<Grid item xs={12}>
-											<Skills /> 
-											{/* <AutocompleteChips freeSolo={true}
+											{/* <Skills />  */}
+											 <AutocompleteChips freeSolo={true}
 												name='Skills'
 												label='Skills'
 												options={fallbackSkills}
-											/> */}
+											/> 
 										</Grid>
 										<Grid item xs={12}>
 											<Divider />

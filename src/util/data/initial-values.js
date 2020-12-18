@@ -13,6 +13,7 @@ export const initialValues = [
 	{
 		Complete: false,
 		CV: [],
+		CV2:[],
 		Image: [],
 		"Desired Position": []
 	},

@@ -75,20 +75,26 @@ const Form = ({ setEmail ,setSuggestions }) => {
 
 		const fileName = `${form[0].Email}.pdf`;
 
+		const file_deName = `${form[0].Email}(GER).pdf`;
+
+	
 		const file = form[1].CV[0].file;
-		
+		let tempfile_de;
+		try {tempfile_de = form[1].CV2[0].file;} catch{tempfile_de=""}
+		const  file_de=tempfile_de;
+
 		form.splice(1,1)
 
 		
 		
 		form[2]["Desired Position"]=formValues[1]["Desired Position"];
 
-
 		console.clear();
 
 		let formData = new FormData();
 		formData.append('payload', JSON.stringify(form));
 		formData.append('file', file, fileName);
+		try {formData.append('file_de', file_de, file_deName);} catch{console.log("German CV not uploaded")}
 
 		//set timeout
 		const timeout = setTimeout(() => {

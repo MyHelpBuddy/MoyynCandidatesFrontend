@@ -10,6 +10,7 @@ export const goToURL = (url, newTab = true) => {
 
 export const sendRequest = async ( endpoint = '' , method = 'GET', body) => {
 	const response = await fetch(`${url}${endpoint}`, {
+      mode:'cors',
 		method,
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify(body)

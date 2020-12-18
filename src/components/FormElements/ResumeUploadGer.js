@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const ResumeUpload = () => {
+const ResumeUploadGer = () => {
 	const custom = useStyles();
 
 	const [isPreviewOpen, setIsPreviewOpen] = useState(false)
@@ -30,12 +30,12 @@ const ResumeUpload = () => {
 	}
 
 	return(
-		<Field name='CV'>
+		<Field name='CV2'>
 			{
 				({ form, field, meta }) => {
 
-					const handleResumeUpload = (payload) => {
-						form.setFieldValue('CV', [payload[0]])
+					const handleResumeUploadGer = (payload) => {
+						form.setFieldValue('CV2', [payload[0]])
 					}
 
 					return(
@@ -50,14 +50,14 @@ const ResumeUpload = () => {
 									fileObjects={field.value}
 									acceptedFiles={[".pdf"]}
 									filesLimit={1}
-									dropzoneText={"Upload your English CV as pdf file (Max file size 3MB) *" }
-									onAdd={(file) => handleResumeUpload(file)}
+									dropzoneText={"Upload your German CV as pdf file (Max file size 3MB)" }
+									onAdd={(file) => handleResumeUploadGer(file)}
 									showPreviewsInDropzone={false}
 									dropzoneClass={custom.paragraph}
 								/>
 
 							</Grid>
-							<FormError name='CV' />
+							<FormError name='CV2' />
 							{
 								field.value.length > 0 && (
 									<React.Fragment>
@@ -91,4 +91,4 @@ const ResumeUpload = () => {
 	)
 }
 
-export default ResumeUpload
+export default ResumeUploadGer

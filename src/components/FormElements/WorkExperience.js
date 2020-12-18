@@ -117,9 +117,10 @@ const FormikWorkExperience = () => {
                                     style={{fontSize: '0.8rem'}}
                                     multiple
                                     native
-                                    value=''
+                                    value={['']}
                                     onChange={handleExperienceChange}
                                     disabled={role[0] ? false : true}
+                                    type="select-multiple"
                                  >
                                     {
                                        experienceArray.map((level) => (

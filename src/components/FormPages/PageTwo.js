@@ -6,6 +6,7 @@ import ResumeUpload from '../FormElements/ResumeUpload';
 import Buttons from '../FormElements/Buttons';
 import { AvailableJobs } from '../../util/data/AvailableJobs'; 
 import AutocompleteChips from '../FormElements/AutocompleteChipsForm';
+import ResumeUploadGer from '../FormElements/ResumeUploadGer';
 
 
 const PageTwo = ({ initialValues, handleFormChange }) => {
@@ -43,6 +44,7 @@ const PageTwo = ({ initialValues, handleFormChange }) => {
 									</Grid>
 									<Grid item xs={12} md={8}>
 										<ResumeUpload />
+										<ResumeUploadGer/>
 									</Grid>
 									<Grid item xs={12}   >
 									<Typography
@@ -54,12 +56,7 @@ const PageTwo = ({ initialValues, handleFormChange }) => {
 										>
 											Positions applying for (If Any)
 											</Typography>
-{/* 										<TextField
-											name="Desired Position"
-											label="Please paste the exact job title of all positions that you are applying for"
-											placeholder="Please paste the exact job titles of all positions that you are applying for"
-														
-										/> */}
+
 																							<Grid item xs={12}>
 														<AutocompleteChips
 															name="Desired Position"
