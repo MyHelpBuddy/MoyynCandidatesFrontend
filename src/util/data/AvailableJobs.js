@@ -5,7 +5,7 @@ export const AvailableJobs = [
 'Electrical Engineer (m/w/x) - MO4 - Talent Pool - Germany',
 'Electronics Engineer (m/w/x) - MO5 - Talent Pool - Germany',
 'Biotechnologist (m/w/x) - MO6 - Talent Pool - Germany',
-'Biomedical Engineer (m/w/x) - MO7 - Talent Pool - Germany',
+"Biomedical Engineer (m/w/x) - MO7 - Talent Pool - Germany",
 "Civil Engineer (m/w/x) - MO8 - Talent Pool - Germany",
 'Aeronautical Engineer (m/w/x) - MO9 - Talent Pool - Germany',
 'Production Engineer (m/w/x) - MO10 - Talent Pool - Germany',
