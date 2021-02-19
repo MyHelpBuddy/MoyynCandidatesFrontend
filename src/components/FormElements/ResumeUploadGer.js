@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Field } from 'formik';
-import { Grid, Typography, useMediaQuery } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { DropzoneAreaBase } from "material-ui-dropzone";
 import Alert from '@material-ui/lab/Alert';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ResumePreview from './ResumePreview';
 import FormError from './FormError';
+import '../../styles/cv.scss';
 
 const useStyles = makeStyles(theme => ({
 	preview: {
@@ -14,7 +16,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	paragraph: {
 		color: '#6c757d',
-		fontSize:'12px'
+		fontSize:'12px',
 	}
 }));
 
@@ -45,7 +47,7 @@ const ResumeUploadGer = () => {
 								close={handleIsPreviewOpen}
 								src={field.value.length > 0 ? field.value[0].data : null}
 							/>
-							<Grid item xs={12}>
+							<Grid item xs={12} className="cv-drop">
 								<DropzoneAreaBase
 									fileObjects={field.value}
 									acceptedFiles={[".pdf"]}

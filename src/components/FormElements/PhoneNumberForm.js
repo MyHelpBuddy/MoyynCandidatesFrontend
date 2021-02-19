@@ -17,6 +17,7 @@ const FormikPhoneNumber = ({ name }) => {
 							defaultCountry={"de"}
 							placeholder="+49 30 901820"
 							error={false}
+							label ="Phone Number"
 						/>
 					);
 				}}

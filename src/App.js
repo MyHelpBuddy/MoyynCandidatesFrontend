@@ -1,84 +1,80 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch,
 } from "react-router-dom";
-import { 
-   Box,
-   Paper,
-} from '@material-ui/core';
 import Candidate from './pages/Candidate';
 import Form from './pages/Form';
-import LogoBar from './components/Shared/LogoBar';
 import './App.css';
+import Header from './components/Header/header'
+import DashboardHeader from './components/Header/DashboardHeader';
+import Footer from './components/Footer/footer'
+// import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import Settings from './pages/Settings';
+import EditProfile from './pages/EditProfile';
 
-const useStyles = makeStyles((theme) => ({
-   paperContainer: {
-      minWidth: "50%",
-      maxWidth: "50%",
-      borderRadius: "15px",
-      //
-      marginBottom: theme.spacing(12),
-      marginTop: theme.spacing(12),
-      [theme.breakpoints.down("md")]: {
-         minWidth: "70%",
-         maxWidth: "70%",
-         marginBottom: theme.spacing(6),
-         marginTop: theme.spacing(6),
-      },
-      [theme.breakpoints.down("sm")]: {
-         minWidth: "90%",
-         maxWidth: "90%",
-         marginBottom: theme.spacing(6),
-         marginTop: theme.spacing(6),
-      },
-   },
-}))
 
 const App = () => {
-   const custom = useStyles()
 
    const [email, setEmail] = useState('');
    const [suggestions, setSuggestions] = useState({moyyn: [], moberries: [], talentuno: []}); //should be an empty object
+   //console.log(suggestions);
+
+   // useEffect(()=>{
+   //    let mail = JSON.parse(localStorage.getItem("email"));
+   //    let sug = JSON.parse(localStorage.getItem("suggestions"));
+   //    localStorage.setItem("email",JSON.stringify(email));
+   //    localStorage.setItem("suggestions",JSON.stringify(suggestions));
+   // },[email,suggestions]);
 
    return (
       <React.Fragment>
-         <Box 
-            height='100%' 
-            width='100%' 
-            display='flex' 
-            alignItems='center' 
-            justifyContent='center'
-            className='App'
-         >
             <Router>
-               <Paper elevation={3} className={custom.paperContainer}>
-                  <LogoBar />
-                  <Box p={5}>
                      <Switch>
                         <Route path='/application' >
+                           <Header/>
                            <Form
                               setEmail={setEmail} 
                               setSuggestions={setSuggestions} 
                            />
                         </Route>
                         <Route path='/candidate'  >
+                           <Header/>
                            <Candidate 
                               email={email}
                               setEmail={setEmail}
                               suggestions={suggestions} 
                               setSuggestions={setSuggestions} 
                              />
+                             <Footer/>
+                        </Route>
+                        {/* <Route path='/login'  >
+                           <Header/>
+                           <Login/>
+                           <Footer/>
+                        </Route> */}
+                        <Route path='/dashboard' >
+                           <DashboardHeader/>
+                           <Dashboard email={email} suggestions={suggestions} />
+                        </Route>
+                        <Route path='/editprofile'  >
+                           <DashboardHeader/>
+                           <EditProfile/>
+                        </Route>
+                        <Route path='/settings'  >
+                           <DashboardHeader/>
+                           <Settings/>
                         </Route>
                         <Redirect to='/application' />
                      </Switch>
-                  </Box>
-               </Paper>
             </Router>
-         </Box>
+         
+
+         {/* <Divider/> */}
+         
       </React.Fragment>
    );
 }

@@ -4,6 +4,35 @@
   min-height: 100vh;
 }
 
+.moyynBtn{
+  color: white;
+  background-color: #265CFF;
+  border: 1px solid #265CFF;
+  font-size: 0.8rem;
+  border-radius: 7.5px;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
+  -moz-box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
+  box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
+}
+
+.moyynBtn:hover{
+  color:#265CFF;
+}
+
+.moyynBtn-sec{
+  color:  #265CFF;
+  background-color: white;
+  border: 1px solid #265CFF;
+  font-size: 0.8rem;
+  border-radius: 7.5px;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
+  -moz-box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
+  box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
+}
+
+
 .moyynButton--main {
   color: white;
   background-color: #265CFF;
@@ -15,7 +44,8 @@
   -webkit-box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
   -moz-box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
   box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
-  height: 100%;
+  height: 110%;
+  width: 32%;
 }
 
 .moyynButton--main:hover {
@@ -24,6 +54,9 @@
   border: 1px solid #265CFF;
 }
 
+.languages {
+  height: 150%;
+}
 .moyynButton--secondary {
   color: white;
   background-color: #555a60;
@@ -35,6 +68,8 @@
   -webkit-box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
   -moz-box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
   box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
+  width: 32%;
+  height: 110%;
 }
 
 .moyynButton--secondary:hover {
@@ -49,7 +84,7 @@
   box-shadow: 0px 0px 12px 2px rgba(194,194,194,1);
 }
 
-.fullHeight: {
+.fullHeight {
   height: 100%;
   color: red;
 }

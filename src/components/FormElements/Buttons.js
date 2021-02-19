@@ -7,12 +7,12 @@ import {
 
 const useStyles = makeStyles((theme) => ({
 	box: {
-		width: '50%',
+		width: '70%',
 		[theme.breakpoints.down("md")]: {
-			width: '60%'
+			width: '80%'
 		},
 		[theme.breakpoints.down("sm")]: {
-			width: '70%'
+			width: '90%'
 		},
 		[theme.breakpoints.down("xs")]: {
 			width: '100%'

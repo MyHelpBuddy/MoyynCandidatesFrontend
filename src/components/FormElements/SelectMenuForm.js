@@ -3,7 +3,7 @@ import { TextField } from "@material-ui/core";
 import { Field } from "formik";
 import FormError from './FormError';
 
-const FormikSelectMenu = ({ name, label, options }) => {
+const FormikSelectMenu = ({ name, label, options, placeholder=null }) => {
 
 	return (
 		<React.Fragment>
@@ -12,6 +12,7 @@ const FormikSelectMenu = ({ name, label, options }) => {
 					return (
 						<TextField
 							{...field}
+							placeholder={placeholder}
 							label={label}
 							fullWidth
 							select

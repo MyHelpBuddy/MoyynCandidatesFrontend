@@ -4,7 +4,7 @@ import { Chip, TextField } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import FormError from './FormError';
 
-const AutocompleteChipsForm = ({ name, options, label, freeSolo=false }) => {
+const AutocompleteChipsForm = ({ name, options, label, freeSolo=false, placeholder=null }) => {
 	return(
 		<FieldArray name={name}>
 			{
@@ -21,8 +21,8 @@ const AutocompleteChipsForm = ({ name, options, label, freeSolo=false }) => {
 
 					return(
 						<React.Fragment>
-							<Autocomplete
-					         multiple
+							<Autocomplete 
+							 multiple
 					         options={options.map(option => option)}
 							 onChange={handleChange}
 							 freeSolo={freeSolo}
@@ -42,7 +42,8 @@ const AutocompleteChipsForm = ({ name, options, label, freeSolo=false }) => {
 					            <TextField 
 					           		{...params} 
 					           		variant="outlined" 
-					           		label={label}  
+									   //label={label} 
+									   placeholder={placeholder}
 					           	/>
 					         )}
 					      />

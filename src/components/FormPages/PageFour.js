@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import { pageFourValidation as validationSchema } from '../../util/validation/form-validation';
 import { europeanCountries, europeanCities } from '../../util/data/static-data'; 
-import { Grid, Typography, Divider } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import Checkbox from '../FormElements/CheckboxForm';
 import DesiredEmployment from '../FormElements/DesiredEmployment';
 import AutocompleteChips from '../FormElements/AutocompleteChipsForm';
@@ -32,11 +32,11 @@ const PageFour = ({ initialValues, handleFormChange }) => {
 						({ values }) => {
 							
 							return(
-								<Form onKeyDown={onKeyDown}>
-									<Grid container spacing={5}>
-										<Grid item xs={12}>
+								<div className='bg-white c-shadow'>
+										<Form onKeyDown={onKeyDown}>
+									<Grid container spacing={5} style={{padding:"2rem"}}>
+										{/* <Grid item xs={12}>
 											<Typography
-												className="header"
 												variant="h6"
 												style={{ marginBottom: "1rem" }}
 												align="center"
@@ -44,16 +44,20 @@ const PageFour = ({ initialValues, handleFormChange }) => {
 											>
 												Preferences
 											</Typography>
-										</Grid>
+										</Grid> */}
 										<Grid item xs={12}>
+											{/* <div className='flex items-center'>
+												<span className='mr1 gray'>I am willing to relocate</span>
+												<label className="switch" htmlFor="dl">
+													<input type="checkbox" name='Relocation Willingness' id="rl" />
+													<div className="slider round"></div>
+												</label>
+											</div> */}
 											<Checkbox
 												name='Relocation Willingness'
 												label='I am willing to relocate'
 												variant='body1'
 											/>
-										</Grid>
-										<Grid item xs={12}>
-											<Divider />
 										</Grid>
 										{
 											values['Relocation Willingness'] && (
@@ -62,6 +66,7 @@ const PageFour = ({ initialValues, handleFormChange }) => {
 														<AutocompleteChips
 															name="Countries of Preference"
 															label="Countries of preference"
+															placeholder="Countries of preference"
 															options={europeanCountries}
 														/>
 													</Grid>
@@ -69,11 +74,9 @@ const PageFour = ({ initialValues, handleFormChange }) => {
 														<AutocompleteChips
 															name="Cities of Preference"
 															label="Cities of preference"
+															placeholder="Cities of Preference"
 															options={europeanCities}
 														/>
-													</Grid>
-													<Grid item xs={12}>
-														<Divider />
 													</Grid>
 												</React.Fragment>
 											)
@@ -84,9 +87,6 @@ const PageFour = ({ initialValues, handleFormChange }) => {
 											<DesiredEmployment />
 										</Grid>
 										<Grid item xs={12}>
-											<Divider />
-										</Grid>
-										<Grid item xs={12}>
 											<ProfilePicker  />
 										</Grid>
 										<Grid item xs={12}>
@@ -94,6 +94,7 @@ const PageFour = ({ initialValues, handleFormChange }) => {
 										</Grid>
 									</Grid>
 								</Form>
+									</div>
 							)
 						}
 					}

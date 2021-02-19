@@ -14,6 +14,7 @@ import {
 } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import './language.css';
 
 const languagesArray = Object.values(languagesObject).map(
 	(option) => option.name
@@ -47,7 +48,7 @@ const Languages = () => {
 				};
 				return (
 					<Grid container spacing={1}>
-						<Grid item xs={8}>
+						<Grid item xs={7} className="lsv">
 							<Autocomplete
 								options={languagesArray}
 								value={valueLang}
@@ -69,16 +70,17 @@ const Languages = () => {
 								}}
 							/>
 						</Grid>
-						<Grid item xs={4}>
+						<Grid item xs={5}>
 							<TextField
 								name="Languages"
 								onBlur={form.handleBlur}
-								select
 								fullWidth
+								select
+								className='lvl'
 								variant="outlined"
 								label="Level"
 								disabled={!valueLang}
-								value={['']}
+								value=""
 							>
 								{levels.map((level) => (
 									<MenuItem

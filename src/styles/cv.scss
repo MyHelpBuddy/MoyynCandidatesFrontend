@@ -1,0 +1,24 @@
+.cv-drop{
+    .MuiDropzoneArea-text{
+        font-size: 1rem !important;
+        padding: 0 5px;
+    }
+}
+
+
+@media screen and (max-width: "486px") {
+    .cv-drop{
+        .MuiDropzoneArea-text{
+            font-size: 0.7rem !important;
+            padding: 0 5px;
+        }
+        .MuiDropzoneArea-icon{
+            height: 2.4rem !important;
+            width: 2.4rem !important;
+        }
+        .MuiDropzoneArea-root{
+            min-height: 100px !important;
+        }
+    }
+    
+}

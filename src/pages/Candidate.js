@@ -3,12 +3,11 @@ import {
 	Switch, 
 	Route, 
 	Redirect, 
-	useRouteMatch, 
+	useRouteMatch,
 	useHistory
 } from 'react-router-dom';
 import EnterEmail from '../components/CandidatePages/EnterEmail';
-import Suggestions from '../components/CandidatePages/Suggestions';
-import PartnerSuggestions from '../components/CandidatePages/PartnerSuggestions';
+// import Suggestions from '../components/CandidatePages/Suggestions';
 import PartnersText from '../components/CandidatePages/PartnersText';
 import Feedback from '../components/CandidatePages/Feedback';
 import ErrorPage from '../components/Shared/ErrorPage';
@@ -31,14 +30,16 @@ const Candidate = ({ suggestions, setSuggestions, email, setEmail }) => {
 	useEffect(() => {
 		window.scrollTo({
 	   	top: 0,
-	   	behavior: "auto"
+		   behavior: "auto"
 	 	});
 	})
 
 	if (error) {
 		return(
 			<React.Fragment>
-				<ErrorPage setError={setError} />
+				<div className='flex items-center justify-center bg-white ma3 br2 vh-75'>
+					<ErrorPage setError={setError} />
+				</div>
 			</React.Fragment>
 		)
 	}
@@ -46,55 +47,40 @@ const Candidate = ({ suggestions, setSuggestions, email, setEmail }) => {
 	if (isLoading) {
 		return(
 			<React.Fragment>
-				<Loading />
+				<div className='flex items-center justify-center bg-white ma3 br2 vh-75'>
+					<Loading />
+				</div>
 			</React.Fragment>
 		)
 	}
 
 	return(
-		<React.Fragment>
-			<Switch>
-				<Route path={`${path}/check-application`} exact>
-					<EnterEmail 
-						setSuggestions={setSuggestions} 
-						setIsLoading={setIsLoading} 
-						setError={setError} 
-						moveToPage={moveToPage} 
-						email={email} 
-						setEmail={setEmail} 
-					/>
-				</Route>
+		<div className="flex justify-center items-center">
+			<div style={{minHeight:"500px"}} className='flex justify-center items-center w-90 bg-white pa4 ma3 br2'>
+				<Switch>
+					<Route path={`${path}/check-application`} exact>
+						<EnterEmail 
+							setSuggestions={setSuggestions} 
+							setIsLoading={setIsLoading} 
+							setError={setError} 
+							moveToPage={moveToPage} 
+							email={email} 
+							setEmail={setEmail} 
+						/>
+					</Route>
 
-				<Route path={`${path}/suggestions`} >
-					<Suggestions 
-						setError={setError} 
-						moveToPage={moveToPage} 
-						email={email} 
-						suggestions={suggestions} 
-						setIsLoading={setIsLoading}
-					/>
-				</Route>
+					<Route path={`${path}/partners`} >
+						<PartnersText setIsLoading={setIsLoading} />
+					</Route>
 
-				<Route path={`${path}/partner-suggestions`} >
-					<PartnerSuggestions 
-						talentuno={suggestions.talentuno} 
-						moberries={suggestions.moberries} 
-						moveToPage={moveToPage} 
-						setIsLoading={setIsLoading}
-					/>
-				</Route>
+					<Route path={`${path}/feedback`} >
+						<Feedback email={email} />
+					</Route>
 
-				<Route path={`${path}/partners`} >
-					<PartnersText setIsLoading={setIsLoading} />
-				</Route>
-
-				<Route path={`${path}/feedback`} >
-					<Feedback email={email} />
-				</Route>
-
-				<Redirect to={`${path}/check-application`} />
-			</Switch>
-		</React.Fragment>
+					<Redirect to={`${path}/check-application`} />
+				</Switch>
+			</div>
+		</div>
 	)
 }
 

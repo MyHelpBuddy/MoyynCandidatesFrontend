@@ -23,27 +23,19 @@ const PartnerSuggestions = () => {
 				</Grid>
 				<Grid item xs={12}>
 					<Typography color='textSecondary'>
-						Thank you for applying and joining out talent pool!
+						Thank you for applying and joining out talent pool, You do not have any matching jobs from our direct clients at the moment!
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
 					<Typography color='textSecondary'>
-						At Moyyn, we work directly with clients as well as several partner platforms to increase your chances of getting a job, especially during the current Covid situation. We also work with several partner platforms and would like to give a recommendation to you.
+						At Moyyn, we work directly with clients as well as several partner platforms to increase your chances of getting a job, especially during the current Covid situation.
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
-					<Typography color='textSecondary'>
-						What are the advantages of being recommended by us?
-					</Typography>
-				</Grid>
-				<Grid item xs={12}>
-					<Typography color='textSecondary'>
-						• Because we work closely with our partners, companies are more willing to consider your application and hire you if you meet their requirements
-					</Typography>
-				</Grid>
-				<Grid item xs={12}>
-					<Typography color='textSecondary'>
-						• You are also considered as a skilled candidate recommended by Moyyn and you have a higher chance of being interviewed for suitable positions
+					<Typography color='textSecondary' style={{fontSize:"0.94rem"}}>
+						<span className="f5">What are the advantages of being recommended by us?</span>
+							<br/> &nbsp;&nbsp;&nbsp;&nbsp; • Because we work closely with our partners, companies are more willing to consider your application and hire you if you meet their requirements
+							<br/> &nbsp;&nbsp;&nbsp;&nbsp; • You are also considered as a skilled candidate recommended by Moyyn and you have a higher chance of being interviewed for suitable positions
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
@@ -53,28 +45,28 @@ const PartnerSuggestions = () => {
 				</Grid>
 				<Grid item xs={12}>
 					<Typography color='textSecondary'>
-						P.S: If you are applying at a later point of time, please save and use your personal recommendation link while registering at our partners at any point of time.
+					P.S: If you are applying at a later point of time, please save and use your personal recommendation link while registering at our partners at any point of time.
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
 					<Divider />
 				</Grid>
-								<Grid item xs={12} md={6}>
+				<Grid item xs={12} md={6}>
 					<Grid container spacing={2}>
 						<Grid item xs={12} >
 							<Typography variant='subtitle2' color='primary' align='center'>
 								Partner Platform 1
 							</Typography>
 						</Grid>
-						<Grid item xs={12} style={{height: '200%'}} >
-							<Button
-								onClick={() => goToURL("https://moyyn.com/de-personal-recommendation")} 
-								fullWidth
-								className='moyynButton--main fullHeight'
-								style={{textTransform: 'none', padding: '1.2rem'}}
-							>
-								Personal recomendation link
-							</Button>
+						<Grid item xs={6} style={{margin:"0 auto"}}>
+								<Button
+									onClick={() => goToURL("https://moyyn.com/de-personal-recommendation")} 
+									fullWidth
+									className='moyynBtn'
+									//style={{textTransform: 'none', padding: '1.2rem'}}
+								>
+									Personal recomendation link
+								</Button>
 						</Grid>
 					</Grid>
 				</Grid>
@@ -85,14 +77,13 @@ const PartnerSuggestions = () => {
 								Partner Platform 2
 							</Typography>
 						</Grid>
-						<Grid item xs={12} >
+						<Grid item xs={12}>
 							<Grid container spacing={1}>
 								<Grid item xs={6} >
 									<Button 
 										onClick={() =>goToURL("https://moyyn.com/hu-personal-recommendation")}
 										fullWidth 
-										className='moyynButton--main' 
-										style={{textTransform: 'none'}}
+										className='moyynBtn' 
 									>
 										{
 										   screenAtSmall ? 'Hungary' : 'Recomendation link - Hungary'
@@ -103,7 +94,7 @@ const PartnerSuggestions = () => {
 									<Button 
 										onClick={() =>goToURL("https://moyyn.com/pl-personal-recommendation")}
 										fullWidth 
-										className='moyynButton--main' 
+										className='moyynBtn' 
 										style={{textTransform: 'none'}}
 									>
 										{

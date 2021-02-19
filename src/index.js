@@ -15,8 +15,8 @@ const moyynTheme = createMuiTheme({
 	},
 	typography: {
 		fontFamily: [
-			'Roboto',
 			'Poppins',
+			'Roboto',
 			'-apple-system',
 			'BlinkMacSystemFont',
 			'"Segoe UI"',

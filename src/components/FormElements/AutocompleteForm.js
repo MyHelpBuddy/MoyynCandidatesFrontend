@@ -4,7 +4,7 @@ import { TextField } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 import FormError from './FormError';
 
-const FormikAutocomplete = ({ name, label, options, optionLabel, freeSolo = true, }) => {
+const FormikAutocomplete = ({ name, label, options, optionLabel, freeSolo = true,placeholder=null }) => {
 
 	return (
 		<React.Fragment>
@@ -25,7 +25,7 @@ const FormikAutocomplete = ({ name, label, options, optionLabel, freeSolo = true
 							}}
 							renderInput={(params) => (
 								<TextField
-									label={label}
+									placeholder={placeholder}
 									{...params}
 									{...field}
 									variant="outlined"

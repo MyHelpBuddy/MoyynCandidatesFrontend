@@ -13,7 +13,7 @@ const TextFieldForm = ({ name, label, type, shrink , variant = 'outlined', multi
 						return(
 							<TextField 
 								{...field}							
-								label={label} 
+							//	label={label} 
 								variant={variant}
 					         placeholder={placeholder}
 								type={type}
@@ -21,7 +21,7 @@ const TextFieldForm = ({ name, label, type, shrink , variant = 'outlined', multi
 					         rows={rows}
 								fullWidth
 								InputLabelProps={{
-					            shrink: shrink,
+								shrink: shrink,
 					         }}
 					         disabled={disabled}
 							/>				
