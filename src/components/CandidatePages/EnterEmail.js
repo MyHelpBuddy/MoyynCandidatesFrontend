@@ -133,7 +133,7 @@ const EnterEmail = ({ email, setEmail, setError, setIsLoading, setSuggestions })
 									New candidate? Click{" "}
 									<Link
 										onClick={() => history.push('/application')}
-										style={{ cursor: "pointer" }}
+										style={{ cursor: "pointer", color:"#6EB6FF" }}
 									>
 										{" "}
 										here

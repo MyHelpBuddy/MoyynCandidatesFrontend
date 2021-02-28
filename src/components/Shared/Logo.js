@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
    logoMain: {
-		color: '#265CFF' ,
+		color: '#6EB6FF' ,
 		textDecoration: 'none',
 		fontSize: '1.5rem',
 		fontWeight: '800',

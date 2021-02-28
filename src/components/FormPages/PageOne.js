@@ -115,10 +115,11 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 																		</label>
 																	</div> */}
 																	<Switch 
-																name="Currently Looking For Job"
-																label="Currently Looking For a Job"
-																variant='body1'
-															/>
+																		name="Currently Looking For Job"
+																		label="Currently Looking For a Job"
+																		variant='body1'
+																		className="switchclr"
+																	/>
 																</Grid>
 
 																<Grid item xs={12}>
@@ -132,7 +133,7 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 																					href="https://moyyn.com/terms-and-conditions-2/"
 																					rel="noopener"
 																					target="_blank"
-																					style={{ cursor: "pointer" }}
+																					style={{ cursor: "pointer", color:"#6EB6FF" }}
 																				>
 																					Terms of Use
 																			</Link>{" "}
@@ -141,7 +142,7 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 																					href="https://moyyn.com/privacy/"
 																					rel="noopener"
 																					target="_blank"
-																					style={{ cursor: "pointer" }}
+																					style={{ cursor: "pointer", color:"#6EB6FF" }}
 																				>
 																					Privacy Policy
 																			</Link>
@@ -162,11 +163,11 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 													</Box>
 												</Grid>
 												<Grid item xs={12}>
-													<Typography variant='subtitle2' color='textSecondary' align="center">
+													<Typography variant='subtitle2' align="center">
 														Already submitted an application? Check application status{" "}
 														<Link
 															onClick={() => history.push('/candidate')}
-															style={{ cursor: "pointer" }}
+															style={{ cursor: "pointer" , color:"#6EB6FF" }}
 														>
 															{" "}
 													here

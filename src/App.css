@@ -6,8 +6,8 @@
 
 .moyynBtn{
   color: white;
-  background-color: #265CFF;
-  border: 1px solid #265CFF;
+  background-color: #6EB6FF;
+  border: 1px solid #6EB6FF;
   font-size: 0.8rem;
   border-radius: 7.5px;
   text-transform: capitalize;
@@ -17,13 +17,13 @@
 }
 
 .moyynBtn:hover{
-  color:#265CFF;
+  color:#6EB6FF;
 }
 
 .moyynBtn-sec{
-  color:  #265CFF;
+  color:  #6EB6FF;
   background-color: white;
-  border: 1px solid #265CFF;
+  border: 1px solid #6EB6FF;
   font-size: 0.8rem;
   border-radius: 7.5px;
   text-transform: capitalize;
@@ -35,8 +35,8 @@
 
 .moyynButton--main {
   color: white;
-  background-color: #265CFF;
-  border: 1px solid #265CFF;
+  background-color: #6EB6FF;
+  border: 1px solid #6EB6FF;
   font-size: 0.8rem;
   border-radius: 7.5px;
   text-transform: capitalize;
@@ -49,9 +49,9 @@
 }
 
 .moyynButton--main:hover {
-  color: #265CFF;
+  color: #6EB6FF;
   background-color: white;
-  border: 1px solid #265CFF;
+  border: 1px solid #6EB6FF;
 }
 
 .languages {

@@ -2,6 +2,10 @@
     display: none !important;
 }
 
+.MuiSwitch-colorPrimary.Mui-checked{
+    color:"#6EB6FF" !important;
+}
+
 .h7{
     height: 38%;
 }

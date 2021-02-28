@@ -23,7 +23,7 @@ const ErrorPage = ({ setError }) => {
 					<Button
 					onClick={handleClick}
 					variant="outlined"
-					style={{backgroundColor:"#265CFF",color:"white",paddingBottom:"2px"}}
+					style={{backgroundColor:"#6EB6FF",color:"white",paddingBottom:"2px"}}
 					className="c-shadow dim w-20"
 				>
 					<Typography>Next</Typography>

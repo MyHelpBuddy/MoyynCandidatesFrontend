@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import 'tachyons';
 import '../../styles/header.scss';
+import Logo from '../../Svg/Logo.png';
 
 function DashboardHeader() {
     let [burgerclicked, setburger] = useState(false);
     return (
         <div className='header w-100 h3'>
             <div className='flex headflex justify-between items-center w-90 center'>
-                <div className='logoheader w4'><a className='link' href="https://moyyn.com/"><h3 className='white logo f4'>Moyyn</h3></a></div>
+                <div className='logoheader w4'><a className='link' href="https://moyyn.com/"><img className="Logo" src={Logo} alt="Moyyn"/>{/*<h3 className='white logo f4'>Moyyn</h3>*/}</a></div>
                 <div className={`navbar w-10-l w-25 w-10-m ${burgerclicked ? 'nav-active' : ''}`}>
                     <ul className='flex nav navlist pa0 ma0 justify-between items-center w-70 ml-auto'>
                         <li className='dn list fw5 f7 f6-l'><a className='link white dim dib' href="/dashboard"><p>Dashboard</p></a></li>

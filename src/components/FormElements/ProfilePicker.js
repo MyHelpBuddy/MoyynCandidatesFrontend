@@ -117,7 +117,7 @@ const ProfilePicker = () => {
 							<Button
 								startIcon={<AddIcon />}
 								fullWidth
-								style={{ margin: "0",backgroundColor:"#265cff", color:"white" }}
+								style={{ margin: "0",backgroundColor:"#6EB6FF", color:"white" }}
 								onClick={handleAddItem}
 								className="dim"
 							>Add</Button>
