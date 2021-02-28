@@ -4,6 +4,14 @@
     box-shadow: 1px 1px 4px 0px rgba(184, 182, 182, 0.712);
 }
 
+.switchclr{
+    .MuiSwitch-colorPrimary.Mui-checked{
+        color: #6EB6FF;
+    }
+    .MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track{
+        background-color: #6EB6FF;
+    }
+}
 
 .signup{
     flex:1;

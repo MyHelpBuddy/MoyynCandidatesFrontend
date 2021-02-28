@@ -114,12 +114,13 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 																			<div className="slider round"></div>
 																		</label>
 																	</div> */}
-																	<Switch 
-																		name="Currently Looking For Job"
-																		label="Currently Looking For a Job"
-																		variant='body1'
-																		className="switchclr"
-																	/>
+																	<div className="switchclr">
+																		<Switch 
+																			name="Currently Looking For Job"
+																			label="Currently Looking For a Job"
+																			variant='body1'
+																		/>
+																	</div>
 																</Grid>
 
 																<Grid item xs={12}>
